@@ -46,7 +46,7 @@ square.cpp: square.cu
 	$(HIP_PATH)/bin/hipify-perl square.cu > square.cpp
 
 square.out: $(SOURCES)
-	$(HIPCC) $(CXXFLAGS) $(SOURCES) -o $@
+	$(CXX) $(CXXFLAGS) $(SOURCES) -o $@
 
 clean:
 	rm -f *.o *.out square.cpp
